@@ -1,0 +1,139 @@
+/*html, body {
+	width: 100%;
+	height: 100%;
+}*/
+/*body {
+	background-color: #3d3d3d;
+}*/
+header {
+}
+.navbar {
+    margin-bottom: 0;
+}
+.header-top {
+    background-color: #212121;
+    border: 0;
+    border-radius: 0;
+}
+.navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+}
+.navbar-collapse.collapse {
+	height: 100%!important;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+aside {
+    background-color: #3d3d3d;
+    height: 100%;
+}
+.dropdown {
+    border-bottom: solid 1px #5c5c5c;
+    background-color: #303030;
+}
+.dropdown-menu>li>a {
+    color: #fff;
+    padding-left: 40px;
+    font-size: 12px;
+}
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover,
+.nav a,
+.nav a:focus,
+.nav a:hover {
+    background-color: #303030;
+    color: #fff;
+}
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover, {
+    background-color: #3d3d3d;
+}
+.dropdown-toggle {
+    background-color: #303030;
+}
+.dropdown-menu {
+    background-color: #3d3d3d;
+    margin-top: 0;
+}
+.dropdown a {
+    color: #fff;
+}
+.dropdown i {
+    font-size: 14px;
+    margin-right: 5px;
+    text-shadow: none;
+}
+section{
+	height: 100%;
+}
+div.show {
+    height: 125px;
+    color: #fff;
+    padding: 10px 10px 0 10px;
+    text-align: right;
+    border: solid 5px #fff;
+}
+div.show div.bottom {
+    height: 30px;
+    margin: 10px -10px 0;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+div.show div.bottom a {
+    display: block;
+    height: inherit;
+    margin: 0 8px;
+    line-height: 30px;
+    color: #fff;
+}
+div.show div.bottom a i {
+    float: right;
+}
+.show i.icon-comments,
+i.icon-bar-chart {
+    font-size: 65px;
+    float: left;
+}
+.show i.small {
+    font-size: 20px;
+    margin-top: 3px;
+}
+.show strong {
+    /* display: inline-block; */
+    font-size: 31px;
+    margin-bottom: 1px;
+    /* text-align: right; */
+    /* float: right; */
+}
+.show span {
+    /* display: inline-block; */
+    /* float: right; */
+    font-size: 15px;
+}
+.orange {
+    background-color: #ffb848;
+    /*margin: 0 1%;*/
+}
+.green {
+    background-color: #28b779;
+    margin-bottom: 10px;
+}
+.img {
+	height: 130px;
+}
+.form {
+	height: 50px;
+}
+.tt {
+	height: 300px;
+}
+.pagination {
+	margin-top: 0;
+	float: right;
+}

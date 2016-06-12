@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    margin: 10px 0px;
+    background-color: #0D7792;
+    overflow: auto;
+    padding: 1px 10px;
+}
+
+/*三个table的基本属性*/
+
+table {
+    width: 654px;
+    background-color: #fff;
+    border-spacing: 0px;
+}
+
+/*td的基本属性*/
+
+td {
+    font-size: 12px;
+    line-height: 150%;
+}
+
+/*link的基本设置*/
+
+a {
+    color: #fc0099;
+    text-decoration: none;
+}
+
+/*最外层设置*/
+
+.container {
+    background-color: #fff;
+    width: 730px;
+    margin: 0px auto 10px;
+    padding: 5px 38px 50px;
+    border-radius: 35px;
+    -moz-border-radius: 35px;
+    -webkit-border-radius: 35px;
+}
+
+/*top start*/
+
+.top {
+    height: 80px;
+    /*高度和td一致*/
+}
+
+/*logo图片居中靠上*/
+
+.top td:first-child {
+    width: 182px;
+    height: inherit;
+    vertical-align: top;
+    padding: 0px 2px;
+}
+.top img {
+    width: 180px;
+    height: 76px;
+}
+
+/*使注册登录等link在td的右下方*/
+
+.top td:last-child {
+    width: 472px;
+    height: inherit;
+    vertical-align: bottom;
+    text-align: right;
+}
+
+/*top end*/
+
+
+/*middle start*/
+
+.middle {
+    height: 2414px;
+}
+
+/*注册标题的样式*/
+
+.middle .name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*注册标题的位置*/
+
+.middle tr:first-child {
+    height: 58px;
+    padding: 2px;
+    text-align: center;
+    vertical-align: top;
+}
+
+/*主要table*/
+
+.main {
+    width: 654px;
+    border-collapse: collapse;
+    border: solid 1px #ccc;
+    font-size: 12px;
+}
+
+/*所有td的默认样式*/
+
+.main td {
+    border: solid 1px #ccc;
+    font-size: 12px;
+    line-height: 150%;
+    text-decoration: none;
+    color: #333;
+    padding: 1px 2px;
+}
+
+/*所有左单元格的样式*/
+
+.main tr td:first-child {
+    width: 136px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+/*第一行和最后一行样式*/
+
+.main tr:first-child td,
+.main tr:last-child td {
+    text-align: center;
+    vertical-align: middle;
+}
+.main tr:first-child td {
+    background-color: #f8f8f8;
+}
+.main tr:last-child td {
+    height: 82px;
+    padding: 2px;
+}
+
+
+/*三个合并单元格的样式*/
+
+.main tr:nth-child(2) td,
+.main tr:nth-child(12) td,
+.main tr:nth-child(19) td {
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 3px;
+    background-color: #eee;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(0, 51, 153);
+}
+
+/*每个小标题的默认样式*/
+
+.main .sep {
+    width: 654px;
+    /*colspan: 2;*/
+}
+
+/*input的默认样式*/
+
+.main input {
+    width: 221px;
+    height: 21px;
+    /*border: solid 1px;*/
+    padding: 1px;
+    font-size: 11px;
+}
+.main .c {
+    width: 12px;
+    height: 12px;
+    margin: 3px 0.5ex;
+    padding: 0px;
+}
+
+/*第一行说明文字*/
+
+.main .note {
+    text-align: center;
+}
+
+/*字体的特殊样式*/
+
+.main .red {
+    color: red;
+}
+.main .darkblue {
+    color: #00f;
+}
+
+/*ling样式*/
+
+.main a {
+    color: #00f;
+}
+.main textarea {
+    width: 442px;
+    height: 96px;
+}
+.main b {
+    margin: 0px 3px;
+}
+
+/*提交按钮样式*/
+
+.s input {
+    width: 75px;
+    height: 20px;
+    padding: 2px 8px 3px;
+    font-size: 12px;
+}
+
+/*check的样式*/
+
+.c input {
+    padding: 2px 2px;
+}
+.footer {
+    /*height: 50px;*/
+    text-align: center;
+    vertical-align: top;
+}

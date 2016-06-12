@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出框</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" type="text/css" href="../css/4-2.css">-->
+    <!--<script src="../js/jquery-2.0.2.js"></script>-->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <style>
+        body{
+            background: #d9d9d9;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            width: 380px;
+            height: 400px;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+
+        .login {
+            background-color: #fff;
+            /* color: #fff; */
+            width: 380px;
+            margin: 0 auto;
+            padding: 10px;
+            border-bottom: solid 1px #eee;
+
+        }
+        .btn{
+            height: 40px;
+        }
+        .title{
+            height: 45px;
+        }
+        .wrap .logo {
+            display: block;
+            background: -webkit-image-set(url("../img/7_1_baidu_logo.png") 1x, url("../img/7_1_baidu_logo.png") 2x) 18px 8px no-repeat;
+            height: 45px;
+            font-weight: bold;
+            padding-left: 50px;
+            line-height: 45px;
+            width: 300px;
+            float: left;
+        }
+        .closed{
+            float: right;
+            font-size: 20px;
+            /* border: solid 1px red; */
+            line-height: 36px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .checkbox, .radio {
+            width: 200px;
+            float: left;
+            margin: 0;
+        }
+        .position {
+            font-size: 10px;
+            margin: 10px 0;
+            height: 23px;
+            line-height: 23px;
+        }
+        .fotget {
+            float: right;
+        }
+        .input-group-addon, .input{
+            background: #faffbd;
+            border-radius: 0;
+            border: solid 1px #ddd;
+            outline: none;
+            height: 40px;
+        }
+        .input-group-addon {
+            border-right: 0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="wrap" id="voteAddModel">
+        <div class="title">
+            <span class="logo">登录百度账号</span>
+            <span class="glyphicon glyphicon-remove closed"></span>
+        </div>
+        <div class="login">
+            <div class="position">
+                <a href="#" class="fotget">短信快捷登录</a>
+            </div>
+            <form action="manage.html" method="post">
+                <div class="form-group">
+                    <label for="usernameInput" class="sr-only"></label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                        <input type="text" class="form-control input" id="usernameInput" placeholder="手机/邮箱/用户名"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="passwordInput" class="sr-only"></label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input type="password" class="form-control input" id="passwordInput" placeholder="密码"/>
+                    </div>
+                </div>
+                <div class="position">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" checked/>下次自动登录</label>
+                    </div>
+                    <a href="#" class="fotget">忘记密码?</a>
+                </div>
+                <input type="submit" class="btn btn-primary form-control" value="登录"/>
+                <div class="position">
+                    <a href="#" class="fotget">立即注册</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <div id="vote_add_new" class="btn btn-primary pull-left" style="margin-right: 10px;">新增</div>
+
+    </div>
+    <div id="model_container"></div>
+    <script>
+        $('#vote_add_new').on('click',function(){
+            var voteAdd = $("#voteAddModel").clone().appendTo('#model_container').attr('id','');
+            voteAdd.modal('show');
+            //图片预览
+//            voteAdd.find('.tip-pic').change(function(){
+//                previewPic(this);
+//            })
+        });
+    </script>
+    <!--<script src="../js/jquery-2.0.2.js"></script>-->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+</div>
+
+</body>
+</html>

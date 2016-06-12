@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax请求天气</title>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<style>
+    #hover {
+        display: block;
+        border: 1px solid #ccc;
+        height: 20px;
+        width: 100px;
+        text-decoration: none;
+    }
+    #wshow{
+        position: fixed;
+        left: 5px;
+        top: 40px;
+        border: 1px #cccccc solid;
+        width: 500px;
+        height: 160px;
+        display: block;
+        font-size: 12px;
+        line-height: 20px;
+        color: #555;
+        display: none;
+    }
+    #wshow p{
+        display: block;
+        /* line-height: 30px; */
+        vertical-align: middle;
+        padding-top: 7px;
+        height: 15px;
+        vertical-align: middle;
+    }
+    .wshow-con li {
+        display: block;
+        width: 99px;
+        float: left;
+    }
+    .wshow-con span {
+        display: block;
+        text-align: center;
+
+    }
+
+    .wshow-con {
+        list-style: none;
+        padding: 0
+    }
+    .weight{
+        font-weight: bold;
+    }
+    .wshow-title span {
+        padding: 0 10px 0 10px;
+    }
+
+</style>
+<body>
+<button class="btn btn-primary" id="test">天气出来</button>
+<div id="wshow">
+    <p class="wshow-title"><span class="weight"></span><a href="http://www.weather.com.cn/weather/101010100.shtml#7d">未来七天天气</a></p>
+    <hr />
+    <ul class="wshow-con">
+        <li><span>周二</span><span class="weight">12</span><span class="weight">多云转霾</span><span>微风</span></li>
+    </ul>
+</div>
+<script>
+    $(function () {
+        $("#text").click(function(){
+            var value = prompt("请添加备注内容：");
+            alert(value);
+        });
+
+        $("[data-toggle='popover']").popover();
+
+        $('#test').mouseover(function () {
+            $.ajax({
+                type: "GET",
+                url: "http://apis.baidu.com/heweather/weather/free",
+                data: "city=beijing",
+                headers: {'apikey': 'eb10833b2f9e6affb0460791a2ea3fcb'},
+                dataType: "json",
+                success: function (data) {
+                    if (typeof data['errNum'] === 'undefined') {
+                        var origin = data['HeWeather data service 3.0'][0];
+                        var result = popData(origin);
+
+                        console.log(result);
+                        var html = "";
+                        for(var i = 0; i < result.days.length; i++){
+                            var day = result.days[i];
+                            html +='<li><span>'+ day.week +'</span><span class="weight">'+ day.tmp + '</span><span class="weight">'+ day.weather+'</span><span>'+ day.sc +'</span></li>';
+                        }
+                        $("#wshow .wshow-title span").text(result.days[0].date.split('-')[1] + '月' + result.days[0].date.split('-')[2]+ "日");
+                        $("#wshow .wshow-con").html(html);
+                        $("#wshow").show();
+                    } else {
+//                        console.log('hehe');
+                    }
+                }
+            });
+        });
+
+        $("#test").mouseleave(function () {
+            $("#wshow").hide();
+        })
+    });
+
+    //处理天气服务器返回的数据，得到一个对象
+    function popData(origin) {
+        var res = {};
+        res['city'] = origin['basic']['city'];
+        //  date-日期 week-周几 weather－天气 tmp－温度 dir－风向 sc－风力
+        var days = [];
+        for (var i = 0; i <= 4; i++) {
+            days[i] = {
+                'date': origin['daily_forecast'][i]['date'],
+                'week': dateToWeek(origin['daily_forecast'][i]['date']),
+                'tmp': origin['daily_forecast'][i]['tmp']['max'] + "~" + origin['daily_forecast'][i]['tmp']['min'] + "℃",
+                'dir': origin['daily_forecast'][i]['wind']['dir'],
+                'sc': origin['daily_forecast'][i]['wind']['sc'],
+            }
+            if (origin['daily_forecast'][i]['cond']['txt_d'] == origin['daily_forecast'][i]['cond']['txt_n']) {
+                days[i]['weather'] = origin['daily_forecast'][i]['cond']['txt_d'];
+            } else {
+                days[i]['weather'] = origin['daily_forecast'][i]['cond']['txt_d'] + "转" + origin['daily_forecast'][i]['cond']['txt_n'];
+            }
+        }
+        res['days'] = days;
+        return res;
+    }
+
+    //输入一个日期字符串("2016-01-22")，返回星期几
+    function dateToWeek(date) {
+        var arr = date.split('-');
+        var year = parseInt(arr[0]);
+        var month = parseInt(arr[1]) - 1;
+        var day = parseInt(arr[2]);
+
+        var d = new Date(year, month, day);
+        var week = d.getDay();
+        switch (week) {
+            case 0:
+                return "星期日";
+            case 1:
+                return "星期一";
+            case 2:
+                return "星期二";
+            case 3:
+                return "星期三";
+            case 4:
+                return "星期四";
+            case 5:
+                return "星期五";
+            case 6:
+                return "星期六";
+        }
+    }
+</script>
+</body>
+</html>

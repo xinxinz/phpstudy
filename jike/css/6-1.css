@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.body {
+    font-size: 62.5%;
+}
+.wrap {
+    margin: 0 auto;
+    height: 528px;
+    width: 320px;
+}
+.main, .main li, li a {
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-box;
+}
+.main {
+    -webkit-box-pack:end;
+    -moz-box-pack:end;
+    -ms-box-pack:end;
+
+    -webkit-box-orient:vertical;
+    -moz-box-orient:vertical;
+    -ms-box-orient:vertical;
+
+    list-style: none;
+
+    /*border: solid 1px #000;*/
+    width: 100%;
+    height: 100%;
+}
+li.title, li.normal {
+    width: 100%;
+    height: 16%;
+}
+/* 仅firefox 识别 */
+@-moz-document url-prefix(){
+    li.title, li.normal {
+        height: 84px;
+    }
+    li a {
+        width: 89px;
+    }
+}
+li.show {
+
+    -webkit-box-flex:1;
+    -moz-box-flex:1;
+    -ms-box-flex:1;
+}
+li.show {
+    height: 105px\9;
+}
+li a {
+
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    -ms-box-pack:center;
+
+    -webkit-box-align:center;
+    -moz-box-align:center;
+    -ms-box-align:center;
+
+    /*width: 84px !important;*/
+    width: 25%;
+    height: 100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+
+    text-decoration: none;
+}
+li a {
+    display: block\9;
+    width: 80px\9;
+    float: left\9;
+    text-align: center\9;
+    vertical-align: middle\9;
+    padding-top: 20px\9;
+}
+@-moz-document url-prefix(){
+    li a {
+        width: 89px;
+    }
+}
+li a,li a:hover,li a:active, li a:visited {
+    border-left: solid 1px #000;
+    border-bottom: solid 1px #000;
+    color: #551a8b;
+}
+li a:hover{
+    background-color: #f0f0f0;
+}
+
+.merge {
+    width: 50%;
+}
+@-moz-document url-prefix(){
+    .merge {
+        width: 178px;
+    }
+}
+.title {
+    background-color: #d6d6d6;
+}
+.normal{
+    background-color: #e0e0e0;
+}
+.op {
+    background-color: #f59233;
+    border-right: solid 1px #000;
+}
+.op:hover {
+     background-color: #f99953;
+}
+.show {
+    background-color: #000;
+
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    -ms-box-pack:center;
+
+    -webkit-box-align:center;
+    -moz-box-align:center;
+    -ms-box-align:center;
+}
+.input {
+    display: block;
+    border: 0;
+    outline: none;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: right;
+}
+a, input {
+    font-size: 2rem;
+}
+@media screen and (max-width: 768px){
+
+    body, html, .wrap{
+        width: 100%;
+        height: 100%;
+    }
+    a, input {
+        font-size: 2rem;
+    }
+}
+/*ie11兼容 start*/
+.ie11 a{
+    display: block;
+    width: 80px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20px;
+}
+.ie11 .show{
+    height: 105px;
+}
+.ie11 .merge{
+    width:160px;
+}
+/*ie11兼容 end*/
+
+/*ie6兼容 start*/
+li a {
+    +padding-top: 0px;
+    +width:78px;
+    +height:84px;
+    +line-height:84px;
+    +font-size: 28px;
+}
+li a.merge{
+    +width:157px;
+}
+.wrap {
+    +width: 320px;
+}
+li.show {
+    +width:317px;
+    +height: 105px
+}
+li a,li a:hover,li a:active, li a:visited {
+    +border-left: solid 1px #000;
+    +border-bottom: solid 1px #000;
+}
+li a:hover{
+    +background-color: #f0f0f0;
+}
+li a.op:hover {
+     +background-color: #f99953;
+}
+.input {
+    /*+background-color: #fff;*/
+    +height: 35px;
+    /*+margin-top: 35px;*/
+    +font-size:32px;
+}
+/*ie6兼容 end*/
+/*ie7兼容 start*/
+* +html a{
+    border-bottom: solid 1px #000;
+    border-top: solid 1px #000;
+}
+/*ie7兼容 end*/
+/*ie8兼容 start*/
+a {
+    font-size: 28px\9;
+}
+.input {
+    height: 70px\9;
+    font-size:32px\9;
+    line-height: 105px\9;
+}
+/*ie8兼容 end*/

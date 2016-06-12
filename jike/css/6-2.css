@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    font: 16px/100% arial,"Hiragino Sans GB","Hiragino Sans GB W3",\5b8b\4f53;
+}
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 50px;
+    /* border: solid 1px red; */
+}
+/*工具栏样式 start*/
+.toos-wrap {
+    height: 60px;
+    border-bottom: 1px solid #fbfbfb;
+    background-color: #fcfcfc;
+    /* border: 1px solid blue; */
+}
+.toos-wrap a{
+    display: block;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+    font-size: 60%;
+    color: #a8a8a8;
+    margin: 0 10px;
+}
+.toos-wrap a.bg {
+    width: 190px;
+    background: url("../img/logo.png");
+    margin-right: 0;
+}
+.toos-wrap a.tip {
+    width: 60px;
+    background: url("../img/tools.png");
+    background-position: -20px -152px;
+    text-align: center;
+    color: #fff;
+    margin-left: 0;
+}
+a.weather, a.date, a.login, a.email, a.skin {
+    padding: 0 5px;
+}
+a.weather:hover, a.date:hover, a.login:hover, a.email:hover, a.skin:hover {
+    background-color: #f7f7f7;
+}
+a.login, a.email, a.skin {
+    padding-left: 25px;
+    width: 35px;
+    float: right;
+    margin-right: 0;
+}
+a.login{
+    background: url("../img/tools.png") -35px -112px no-repeat;
+}
+a.email{
+    background: url("../img/tools.png") -100px -110px no-repeat;
+}
+a.skin{
+    background: url("../img/tools.png") -247px -110px no-repeat;
+}
+a.kaola{
+    width: 190px;
+    background: url("../img/kaola.jpg");
+    border-left: solid 1px #d9d9d9;
+    border-right: solid 1px #d9d9d9;
+    float: right;
+    padding: 0;
+}
+/*工具栏样式 end*/
+/*搜索栏样式 start*/
+.search-box {
+    margin-top: 30px;
+    /* margin-left: 30px; */
+    /* border: solid 1px blue; */
+    height: 40px;
+    /* text-align: center; */
+    padding-left: 50px;
+}
+.search-box .input {
+    width: 400px;
+    height: 36px;
+    vertical-align: bottom;
+}
+.search-box .submit{
+    /* border: solid 1px red; */
+    border: 0;
+    outline: none;
+    width: 123px;
+    height: 40px;
+    background: url("../img/tools.png") -20px 0px no-repeat;
+    vertical-align: bottom;
+    margin-left: -5px;
+}
+/*搜索栏样式 end*/
+/*关键字样式 start*/
+.hot-search {
+    margin-top: 15px;
+    font-size: 70%;
+    color: #666;
+    /* border: solid 1px blue; */
+    padding-left: 155px;
+}
+.hot-search a {
+    margin: 0 2px;
+    text-decoration: none;
+    color: #666;
+}
+.hot-search a:hover {
+    color: #ff0000;;
+}
+/*关键字样式 end*/
+/*主体样式 start*/
+.bodyct {
+    margin-top: 30px;
+}
+/*导航栏样式 start*/
+.navbar{
+    /* background-color: #0aa770; */
+    height: 38px;
+    z-index: -1;
+}
+.navbar a {
+    display: block;
+    float: left;
+    height: 38px;
+    line-height: 38px;
+    width: 100px;
+    color: #fff;
+    text-align: center;
+    z-index: 1000;
+    /*background-color: #0aa770;*/
+}
+.navbar a:hover {
+    background-color: #049A66;
+    cursor: pointer;
+    color: #fff;
+}
+/*导航栏样式 end*/
+
+/*更换皮肤时需要修改的样式集合 start*/
+.left .first, .left .second, .left .third, .right .first, .right .third{
+    border: solid 1px #0aa770;
+}
+.changeBorder{
+    border-color: #0aa770 !important;
+}
+.changeColor{
+    color: #0aa770 !important;
+}
+.changeBgcolor {
+    background-color: #0aa770 !important;
+}
+/*更换皮肤时需要修改的样式集合 end*/
+
+/*左边内容start*/
+.left, .right{
+    height: 415px;
+    margin-top: 10px;
+}
+.left{
+
+    width: 280px;
+    float: left;
+}
+.left .first {
+    height: 70px;
+    margin-bottom: 10px;
+    /* border: solid 1px blue; */
+}
+.left .second {
+    height: 170px;
+    padding-top: 17px;
+}
+.left .second ul{
+    margin-left: 12px;
+    width: 118px;
+    display: block;
+    list-style: none;
+    float: left;
+    font-size: 90%;
+}
+.left .second ul li{
+    padding-left: 25px;
+    display: block;
+    width: 104px;
+    height: 23px;
+    line-height: 23px;
+    margin-bottom: 4px;
+}
+.left .second ul li a {
+    text-decoration: none;
+    color: #000;
+}
+.left .third {
+    height: 140px;
+    background-color: #f7f7f7;
+    border-top: 0;
+}
+.left  .third a{
+    display: block;
+    height: 30px;
+    float: left;
+    width: 55px;
+    text-decoration: none;
+    background-color: #f7f7f7;
+    color: #000;
+    line-height: 30px;
+    text-align: center;
+}
+/*左边内容end*/
+/*右边内容start*/
+.right {
+    width: 700px;
+    float: right;
+}
+.section2 {
+    padding-left: 10px;
+}
+.section1 {
+    margin-top: 15px;
+    padding-left: 10px;
+}
+.section1 span {
+    display: block;
+    width: 18px;
+    height: 20px;
+    float: left;
+    /* border: solid 1px red; */
+    vertical-align: bottom;
+    margin-top: 2px;
+}
+.right .first {
+    height: 270px;
+}
+.right .second{
+    height: 30px;
+}
+.right .third {
+    height: 100px;
+    padding-top: 5px;
+}
+.right a{
+    display: block;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 90%;
+    text-decoration: none;
+}
+.right .first a{
+    width: 112px;
+    color: #000;
+}
+.right .second a{
+    font-size: 75%;
+    color: #3c5698;
+    width: 76px;
+    text-align: center;
+}
+.right .third a{
+    width: 85px;
+    color: #000;
+    text-align: center;
+}
+.right .third .change {
+    font-size: 75%;
+}
+/*右边内容end*/
+
+
+/*左边内容第一行的图标 start*/
+.la{
+    background: url("../img/menus.png") -20px -78px no-repeat;
+}
+.lb{
+    background: url("../img/menus.png") -20px -158px no-repeat;
+}
+.lc{
+    background: url("../img/menus.png") -20px -98px no-repeat;
+}
+.ld{
+    background: url("../img/menus.png") -20px -18px no-repeat;
+}
+.le{
+    background: url("../img/menus.png") -20px -279px no-repeat;
+}
+.lf{
+    background: url("../img/menus.png") -20px -218px no-repeat;
+}
+.lra{
+    background: url("../img/menus.png") -20px -299px no-repeat;
+}
+.lrb{
+    background: url("../img/menus.png") -20px -379px no-repeat;
+}
+.lrc{
+    background: url("../img/menus.png") -20px -259px no-repeat;
+}
+.lrd{
+    background: url("../img/menus.png") -20px -119px no-repeat;
+}
+.lre{
+    background: url("../img/menus.png") -20px -359px no-repeat;
+}
+.lrf{
+    background: url("../img/menus.png") -20px -39px no-repeat;
+}
+/*左边内容第一行的图标 end*/
+
+/*右边内容第一块的图标 start*/
+/*第一行 start*/
+.s1a {
+    background: url("../img/rels.png") 0px -196px no-repeat;
+}
+.s1a {
+    background: url("../img/rels.png") 0px -196px no-repeat;
+}
+.s1b {
+    background: url("../img/rels.png") 0px -116px no-repeat;
+}
+.s1c {
+    background: url("../img/rels.png") 0px -316px no-repeat;
+}
+.s1d {
+    background: url("../img/rels.png") 0px -36px no-repeat;
+}
+.s1e {
+    background: url("../img/rels.png") 0px -155px no-repeat;
+}
+.s1f {
+    background: url("../img/rels.png") 0px -396px no-repeat;
+}
+/*第一行 end*/
+
+/*第2行 start*/
+.s2a {
+    background: url("../img/rels.png") 0px -476px no-repeat;
+}
+.s2b {
+    background: url("../img/rels.png") 0px -236px no-repeat;
+}
+.s2c {
+    background: url("../img/rels.png") 0px -356px no-repeat;
+}
+.s2d {
+    background: url("../img/rels.png") 0px -556px no-repeat;
+}
+.s2e {
+    background: url("../img/rels.png") 0px 4px no-repeat;
+}
+.s2f {
+    background: url("../img/rels.png") 0px -276px no-repeat;
+}
+/*第2行 end*/
+/*第3行 start*/
+.s3a {
+    background: url("../img/rels.png") 0px -436px no-repeat;
+}
+.s3b {
+    background: url("../img/rels.png") 0px -475px no-repeat;
+}
+.s3c {
+    background: url("../img/rels.png") 0px -476px no-repeat;
+}
+.s3d {
+    background: url("../img/rels.png") 0px -636px no-repeat;
+}
+.s3e {
+    background: url("../img/rels.png") 0px -516px no-repeat;
+}
+.s3f {
+    background: url("../img/rels.png") 0px -596px no-repeat;
+}
+/*第一行 end*/
+/*右边内容第一块的图标 end*/
+
+
+a:hover{
+    text-decoration: underline;
+    color: red;
+}
+.search-box span {
+    font-size: 75%;
+}
+
+/*换肤部分的样式 start*/
+.changeSkip {
+    float: right;
+    width: 300px;
+}
+.changeSkip ul{
+    margin-top: 2px;
+    list-style: none;
+}
+.changeSkip li {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 18px;
+    margin-right: 28px;
+}
+.changeSkip li:hover {
+    cursor: pointer;
+}
+li.green {
+    background-color: #0aa770;
+}
+li.red {
+    background-color: #650006;
+}
+li.yellow {
+    background-color: #fee20b;
+}
+li.blue {
+    background-color: #2f4f9e;
+}
+li.black {
+    background-color: #000;
+}
+/*换肤部分的样式 end*/

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>课程表</title>
+    <style type="text/css">
+    body {
+        background-color: #000;
+    }
+    
+    .out {
+        border-spacing: 0px 5px;
+    }
+    
+    .out,
+    .in {
+        width: 600px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    .in {
+        background-color: rgb(228, 228, 228);
+        border-spacing: 0;
+        border-collapse: 0;
+        border: solid 6px rgb(133, 133, 133);
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+    }
+    
+    th {
+        width: 105px;
+        border: solid 2px rgb(133, 133, 133);
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        background-color: rgb(127, 150, 157);
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    .in tr td:nth-last-child(1),
+    .in tr td:nth-last-child(2),
+    .in tr td:nth-last-child(3),
+    .in tr td:nth-last-child(4),
+    .in tr td:nth-last-child(5) {
+        width: 100px;
+        border-bottom: dashed 2px #000;
+        border-left: dashed 2px #000;
+    }
+    
+    .in tr:nth-child(5) td {
+        border: 0px;
+    }
+    
+    .in tr:nth-child(5) {
+        height: 10px;
+        background-color: #000;
+    }
+    
+    .in tr:nth-child(4) td:nth-last-child(1),
+    .in tr:nth-child(4) td:nth-last-child(2),
+    .in tr:nth-child(4) td:nth-last-child(3),
+    .in tr:nth-child(4) td:nth-last-child(4),
+    .in tr:nth-child(4) td:nth-last-child(5) {
+        border-bottom: solid 0px #000;
+    }
+    .in tr:nth-last-child(1) td:nth-last-child(1),
+    .in tr:nth-last-child(1) td:nth-last-child(2),
+    .in tr:nth-last-child(1) td:nth-last-child(3),
+    .in tr:nth-last-child(1) td:nth-last-child(4),
+    .in tr:nth-last-child(1) td:nth-last-child(5) {
+        border-bottom: solid 0px #000;
+    }
+    .in tr td:nth-last-child(5) {
+        width: 100px;
+        border-bottom: dashed 2px #000;
+        border-left: dashed 0px #000;
+    }
+    
+    .in tr:nth-child(5) {
+        border: solid 1px red;
+    }
+    
+    th:first-child {
+        width: 75px;
+        /*background-color: ;*/
+    }
+    
+    .left_flag {
+        width: 34px;
+        background-color: rgb(189, 189, 189);
+        border: 0;
+        border: solid 2px #000;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+    }
+    
+    .num {
+        width: 22px;
+        font-size: 8px;
+        background-color: rgb(123, 123, 123);
+        border: solid 1px #000;
+        border-left: solid 4px #000;
+        border-right: solid 6px #000;
+        border-top: solid 2px #000;
+    }
+    .in tr {
+        height: 40px;
+    }
+    </style>
+</head>
+
+<body background="black">
+    <table class="out">
+        <tr>
+            <th>时间</th>
+            <th>星期一</th>
+            <th>星期二</th>
+            <th>星期三</th>
+            <th>星期四</th>
+            <th>星期五</th>
+        </tr>
+        <tr>
+            <table class="in">
+                <tr>
+                    <td rowspan="4" class="left_flag">上
+                        <br />午</td>
+                    <td class="num">1</td>
+                    <td>思想品德</td>
+                    <td>语文</td>
+                    <td>语文</td>
+                    <td>数学</td>
+                    <td>数学</td>
+                </tr>
+                <tr>
+                    <td class="num">2</td>
+                    <td>数学</td>
+                    <td>数学</td>
+                    <td>英语</td>
+                    <td>语文</td>
+                    <td>语文</td>
+                </tr>
+                <tr>
+                    <td class="num">3</td>
+                    <td>体育</td>
+                    <td>音乐</td>
+                    <td>思想品德</td>
+                    <td>活动</td>
+                    <td>体育</td>
+                </tr>
+                <tr>
+                    <td class="num">4</td>
+                    <td>语文</td>
+                    <td>语文</td>
+                    <td>数学</td>
+                    <td>英语</td>
+                    <td>语文</td>
+                </tr>
+                <tr class="middle">
+                    <td colspan="7"></td>
+                </tr>
+                <tr>
+                    <td rowspan="4" class="left_flag">下
+                        <br />午</td>
+                    <td class="num">1</td>
+                    <td>英语</td>
+                    <td>活动</td>
+                    <td>数学</td>
+                    <td>英语</td>
+                    <td>语文</td>
+                </tr>
+                <tr>
+                    <td class="num">2</td>
+                    <td>活动</td>
+                    <td>美术</td>
+                    <td>影视</td>
+                    <td>卫生</td>
+                    <td>中队</td>
+                </tr>
+                <tr>
+                    <td class="num">3</td>
+                    <td>数学</td>
+                    <td>体育</td>
+                    <td>英语</td>
+                    <td>思想品德</td>
+                    <td>音乐</td>
+                </tr>
+                <tr>
+                    <td class="num">4</td>
+                    <td>自习</td>
+                    <td>自习</td>
+                    <td>自习</td>
+                    <td>自习</td>
+                    <td>自习</td>
+                </tr>
+            </table>
+        </tr>
+    </table>
+</body>
+
+</html>

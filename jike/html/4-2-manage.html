@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>Document</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/4-2-2.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="header-top navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">橘子娱乐-内容管理系统</a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <aside class="col-md-2 col-sm-2 collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav nav-stacked">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+                        <i class="icon-home"></i> 我的面板
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">修改资料</a></li>
+                        <li><a href="">我的稿件</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+                        <i class="icon-file-text"></i> 内容管理
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">发布新闻</a></li>
+                        <li><a href="">评论列表</a></li>
+                        <li><a href="">频道顶置</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="icon-user"></i>用户管理
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">用户列表</a></li>
+                        <li><a href="">冻结用户</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="icon-cogs"></i>设置
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">管理员设置</a></li>
+                        <li><a href="">闪屏设置</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="icon-gift"></i>插件管理
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">投票插件</a></li>
+                        <li><a href="">音频插件</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="icon-th"></i>KOL
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">KOL列表</a></li>
+                        <li><a href="">KOL源</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="icon-briefcase"></i>运营
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">推广列表</a></li>
+                        <li><a href="">明星列表</a></li>
+                        <li><a href="">消息推送</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+        <article class="container-fluid">
+            <ol class="breadcrumb">
+                <i class="icon-home"></i>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Dashbord</a></li>
+                <li class="active">我的稿件</li>
+            </ol>
+            <div class="row img">
+                <div class="show orange col-md-5 col-sm-5  col-xs-6">
+                    <i class="icon-comments"></i>
+                    <strong>1590</strong>
+                    <br />
+                    <span>活跃阅读用户</span>
+                    <div class="bottom">
+                        <a href="#">
+            	VIEW MORE
+            	<i class="small glyphicon glyphicon-arrow-right"></i>
+            	</a>
+                    </div>
+                </div>
+                <div class="show green col-md-5 col-sm-5 col-xs-6">
+                    <i class="icon-bar-chart"></i>
+                    <strong>349</strong>
+                    <br />
+                    <span>优质文章</span>
+                    <div class="bottom">
+                        <a href="#">
+            	VIEW MORE
+            	<i class="small glyphicon glyphicon-arrow-right"></i>
+            	</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row"> -->
+            <div class="row form">
+                <form class="form-inline search">
+                    <button class="btn btn-default  col-md-1 col-sm-1 col-xs-2">新文章</button>
+                    <div class="form-group col-md-2 col-sm-2 col-xs-4">
+                        <select class="form-control">
+                            <option>全部文章</option>
+                            <option>ID</option>
+                            <option>标题</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3 col-sm-3 col-xs-4">
+                        <!-- <label for="sr-only keywordInput"></label> -->
+                        <input type="text" class="form-control col-md-3 col-sm-3 col-xs-4" id="keywordInput" placeholder="输入关键字">
+                    </div>
+                    <input type="submit" class="btn btn-primary col-md-1 col-sm-1 col-xs-2" value="搜索" />
+                </form>
+            </div>
+            <!-- </div> -->
+            <div class="row tt">
+                <table class="table-striped table-bordered col-md-10 col-sm-10 col-xs-12">
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">ID</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11">标题</td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">发布时间</td>
+                        <td class="col-md-1 hidden-sm hidden-xs"> 跟帖</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23225</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="#">“美髯”是古代美男子的标配吗？</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-24 21:05:03</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">389</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23224</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="#">这个以巧克力闻名的小国，却成了恐怖分子的温床</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-24 17:32:45</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">139</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23223</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="#">男生选择分手时，都会有哪些征兆？</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-23 22:28:06</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">343</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23222</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="">昆凌穿平底鞋牛仔裤看着也170，把杰伦都衬高了呢</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-23 15:11:10</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">984</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23221</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="#">日本最危险的动物园！进门前先签免责协议</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-23 09:20:34</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">816</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23220</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="#">这个地僻名弱的小县城，比九寨沟美10倍！</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-22 18:22:30</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">413</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23219</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="#">女生无法招架的男人最性感的24个瞬间！</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-22 16:20:11</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">678</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23218</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="#">没有不炫酷的宝贝,5岁成为美国国家地理签约摄影师！</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-22 13:23:51</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">522</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23225</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="#">“美髯”是古代美男子的标配吗？</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-24 21:05:03</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">389</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23224</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="#">这个以巧克力闻名的小国，却成了恐怖分子的温床</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-24 17:32:45</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">139</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23223</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="#">男生选择分手时，都会有哪些征兆？</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-23 22:28:06</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">343</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23222</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="">昆凌穿平底鞋牛仔裤看着也170，把杰伦都衬高了呢</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-23 15:11:10</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">984</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23221</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="#">日本最危险的动物园！进门前先签免责协议</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-23 09:20:34</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">816</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 col-sm-1 col-xs-1 hidden-xs">23220</td>
+                        <td class="col-md-6 col-sm-7 col-xs-11"><a href="#">这个地僻名弱的小县城，比九寨沟美10倍！</a></td>
+                        <td class="col-md-2 col-sm-3 hidden-xs">2015-11-22 18:22:30</td>
+                        <td class="col-md-1 hidden-sm hidden-xs">413</td>
+                    </tr>
+                </table>
+            </div>
+            <hr class="col-md-10 col-md-offset-2 col-sm-10 col-sm-offset-2 col-xs-12" />
+            <div class="row page">
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+            <!-- <div class="form-inline form-group page">
+                    <input type="submit" class="btn btn-default" value="上一页" />
+                    <input type="submit" class="btn btn-default" value="1" />
+                    <input type="submit" class="btn btn-default" value="2" />
+                    <input type="submit" class="btn btn-default" value="3" />
+                    <input type="submit" class="btn btn-default" value="4" />
+                    <input type="submit" class="btn btn-default" value="5" />
+                    <input type="submit" class="btn btn-default" value="下一页" />
+                </div> -->
+            </div>
+        </article>
+    </section>
+
+</html>

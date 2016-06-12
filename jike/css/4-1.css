@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+@media screen and (min-width:475px) {
+    .header,
+    .banner,
+    .section,
+    .footer,
+    .group {
+        width: 475px;
+        margin: 0 auto;
+    }
+}
+
+body {
+    background-color: #ecedee;
+}
+.header,
+.banner,
+.section,
+.footer,
+.group {
+    width: 100%;
+    min-width: 300px;
+    max-width: 475px;
+}
+.header,
+.footer {
+    background-color: #299ae2;
+    height: 70px;
+}
+.section,
+.section > li,
+.middle,
+.right,
+.header,
+.name {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+}
+.section,
+.middle,
+.right {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+}
+.top,
+.bottom,
+.section > li,
+.middle,
+.right,
+.name {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-box-flex: 1;
+}
+.header,
+.name {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-box-align: center;
+}
+.logo {
+    width: 60px;
+    background: url('../img/css_sprite.png') -16px 145px;
+    background-size: 810px 590px;
+}
+.right-logo {
+    width: 40px;
+    background: url('../img/css_sprite.png') -90px 148px;
+    background-size: 810px 590px;
+}
+.logo,
+.name,
+.right-logo {
+    height: 60px;
+}
+span {
+    color: #fff;
+    font: normal 12px/1.5 georgia, simsun, sans-serif;
+}
+b {
+    font: bold 20px/1.2 georgia, simsun, sans-serif;
+}
+.banner {
+    margin-top: 3px;
+    height: 80px;
+    background: #fff url('../img/css_sprite.png') -165px 139px;
+    background-size: 810px 590px;
+    text-align: right;
+    padding-top: 20px;
+}
+.banner > p {
+    font-size: 20px;
+    color: #e42100;
+    margin-top: 0px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.section {
+    height: 500px;
+}
+.section > li {
+    margin: 4px 6px;
+    border-radius: 8px;
+}
+.left,
+.middle,
+.right {
+    border-right: solid 2px #fff;
+}
+.left {
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+.right {
+    border-right: 0;
+}
+.top,
+.bottom {
+    border-bottom: solid 2px #fff;
+    text-align: center;
+    line-height: 48px;
+    color: #fff;
+}
+.bottom {
+    border-bottom: 0;
+}
+.bg {
+    width: 48px;
+    height: 48px;
+    margin: 10px auto 4px;
+}
+.one {
+    background-color: #39ac60;
+}
+.one .bg {
+    background: url('../img/css_sprite.png') 120px 458px;
+    background-size: 720px 560px;
+}
+.two {
+    background-color: #ea9913;
+}
+.two .bg {
+    background: url('../img/css_sprite.png') 120px 377px;
+    background-size: 720px 560px;
+}
+.three {
+    background-color: #dd4f45;
+}
+.three .bg {
+    background: url('../img/css_sprite.png') 120px 314px;
+    background-size: 720px 560px;
+}
+.four {
+    background-color: #a25397;
+}
+.four .bg {
+    background: url('../img/css_sprite.png') 120px 249px;
+    background-size: 720px 560px;
+}
+.five {
+    background-color: #299ae2;
+}
+.five .bg {
+    background: url('../img/css_sprite.png') 120px 171px;
+    background-size: 720px 560px;
+}
+.icons {
+    width: 270px;
+    /* border: solid 1px red; */
+    
+    height: 110px;
+    margin: 10px auto;
+    font: normal 12px/1.5 georgia, simsun, sans-serif;
+    color: #454546;
+}
+.icons p {
+    margin-top: 15px;
+    text-align: center;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-box-pack: end;
+}
+.icons .imgs li,
+.icons .text li {
+    display: block;
+    width: 37px;
+    height: 35px;
+    margin-right: 21px;
+}
+.icons .text li {
+    text-align: center;
+    height: 20px;
+}
+.icons .imgs,
+.icons .text {
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-box-pack: start;
+}
+.icons>.imgs>.circle1 {
+    background: url('../img/css_sprite.png') -21px 35px;
+    background-size: 720px 560px;
+}
+.icons >.imgs>.circle2 {
+    background: url('../img/css_sprite.png') -81px 35px;
+    background-size: 720px 560px;
+}
+.icons>.imgs>.circle3 {
+    background: url('../img/css_sprite.png') -140px 35px;
+    background-size: 720px 560px;
+}
+.icons>.imgs>.circle4 {
+    background: url('../img/css_sprite.png') -196px 35px;
+    background-size: 720px 560px;
+}
+.icons>.imgs>.circle5 {
+    background: url('../img/css_sprite.png') -262px 35px;
+    background-size: 720px 560px;
+}
+.icons>.imgs>.circle6 {
+    background: url('../img/css_sprite.png') 120px 171px;
+    background-size: 720px 560px;
+}
+.footer {
+    width: 100%;
+    height: 80px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    /*-webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;*/
+}
+.footer li {
+    height: inherit;
+    border-right: solid 1px #eee;
+    width: 25%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    font: normal 16px/1.5 georgia, simsun, sans-serif;
+    color: #fff;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+}
+.home,
+.qq,
+.msg,
+.phone {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-box-align: center;
+}
+.footer .bottom2 {
+    width: 100%;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-box-pack: end;
+    text-align: center;
+    margin: 10px 0;
+}
+.top2 {
+    width: 40px;
+    height: 36px;
+    display: block;
+    /* border: solid 1px red; */
+    
+    margin-top: 10px;
+}
+.phone {
+    border-right: 0;
+}
+.home .top2 {
+    background: url('../img/css_sprite.png') -314px 37px;
+    background-size: 720px 560px;
+}
+.qq .top2 {
+    background: url('../img/css_sprite.png') -420px 39px;
+    background-size: 720px 560px;
+}
+.msg .top2 {
+    background: url('../img/css_sprite.png') -373px 39px;
+    background-size: 720px 560px;
+}
+.phone .top2 {
+    background: url('../img/css_sprite.png') -477px 36px;
+    background-size: 720px 560px;
+}

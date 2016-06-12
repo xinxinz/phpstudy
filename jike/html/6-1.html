@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=no" />
+    <title>计算器</title>
+    <link rel="stylesheet" type="text/css" href="../css/6-1.css">
+    <script src="../js/6-1.js"></script>
+    <!--[if !IE]><!-->
+    <script>
+    if (/*@cc_on!@*/true) {
+        document.documentElement.className += ' ie' + document.documentMode;
+    }
+    </script>
+    <!--<![endif]-->
+</head>
+
+<body>
+    <div class="wrap">
+        <ul class="main" >
+            <li class="show">
+                <input type="text" id="input" maxlength="16" class="input" readonly="readonly" value="0"/>
+            </li>
+            <li class="title">
+                <a href="#" onclick="setToZero()" id="reset">AC</a>
+                <a href="#" onclick="plusChange()">+/-</a>
+                <a href="#" onclick="inputOp('%')">%</a>
+                <a href="#" class="op" onclick="inputOp('/')">/</a>
+            </li>
+            <li class="normal">
+                <a href="#" onclick="inputNumber(7)">7</a>
+                <a href="#" onclick="inputNumber(8)">8</a>
+                <a href="#" onclick="inputNumber(9)">9</a>
+                <a href="#" class="op" onclick="inputOp('*')">*</a>
+            </li>
+            <li class="normal">
+                <a href="#" onclick="inputNumber(4)">4</a>
+                <a href="#" onclick="inputNumber(5)">5</a>
+                <a href="#" onclick="inputNumber(6)">6</a>
+                <a href="#" class="op" onclick="inputOp('-')">-</a>
+            </li>
+            <li class="normal">
+                <a href="#" onclick="inputNumber(1)">1</a>
+                <a href="#" onclick="inputNumber(2)">2</a>
+                <a href="#" onclick="inputNumber(3)">3</a>
+                <a href="#" class="op" onclick="inputOp('+')">+</a>
+            </li>
+            <li class="normal">
+                <a href="#" class="merge" onclick="inputNumber(0)">0</a>
+                <!-- <a href="#" class="merge_right" onclick="inputNumber(0)"></a> -->
+                <a href="#" onclick="inputAdot()">.</a>
+                <a href="#" class="op" onclick="inputOp('=')">=</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

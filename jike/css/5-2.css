@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+div {
+    width: 205px;
+    margin: 40px auto;
+    text-align: center;
+
+}
+
+table{
+    margin-top: 20px;
+    width: 205px;
+    height: 307px;
+    border: solid 1px #8e8e8e;
+    border-collapse: collapse;
+    font-size: 22px;
+}
+td {
+    width: 25%;
+    height: 50px;
+    text-align: center;
+}
+.title {
+    background-color: #d6d6d6;
+    color: #000;
+}
+.normal{
+    background-color: #e0e0e0;
+    color: #000;
+}
+.op{
+    background-color: #f59233;
+    color: #fff;
+}
+.merge{
+    padding-right: 25%;
+}
+.input {
+    background-color: #000;
+    padding: 0 4px;
+    height: 80px;
+}
+#input {
+    background-color: #000;
+    outline: none;
+    border: 0;
+    height: inherit;
+    width: 100%;
+    /*line-height: 48px;*/
+    font-size: 32px;
+    color: #fff;
+    text-align: right;
+    overflow: hidden;
+}
